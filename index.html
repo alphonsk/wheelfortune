@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="javascript.js"></script>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="wheel.css">
+</head>
+<body>
+
+        <div class="main">
+                <div class="scoreHints">
+                    <div class="score">
+                            <table style="width:100%">
+                                <tr>
+                                    <td><h4>Your score is:</h4></td>
+                                     <td><p id="score"></p></td>
+                                </tr>
+                            </table>       
+                    </div>
+                    <div class="hints">
+                            <table style="width:100%">
+                                    <tr>
+                                        <td><h4>Heres a hint:</h4></td>
+                                        <td><p id="hint"></p></td>
+                                    </tr>
+                            </table>  
+                    </div>
+
+                </div>
+                <div class="inn"> 
+                    <div class="words">
+
+                    </div>
+                </div>
+                <div class="enter">
+                        <input type="text" id="char" onkeypress ="this.value=''" onkeyup="fecth_char()">
+                </div>
+                <div class="start">
+                        <button class="button" onclick="onLod()">Start</button>
+                </div>
+
+             
+                
+ 
+        </div>
+    
+
+ 
+
+ 
+ 
+
+
+   <script src="wheel.js"></script> 
+</body>
+</html>
