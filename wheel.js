@@ -14,7 +14,7 @@ var hints= {
 // CURRENT GAME WORD
 var randm = Math.floor(Math.random()*array_of_words.length); 
 var game_word = array_of_words[randm];
- 
+ console.log(game_word)
 
 // HINT GENERATOR
 function hin(){
@@ -32,26 +32,50 @@ function hin(){
 var char = '';
 var entered_char='';
 var score =0;
+var sco=0;
 var doubleGameWord=game_word.split("");
+var xArr=[];
+var entW;
 
  
 
 // GET CHAR FROM INPUT
 function fecth_char() {
- char= document.getElementById("char").value.toLowerCase();  
- match_char(char, game_word); 
+ entW = document.getElementById("char").value.toLowerCase(); 
+
+    for(i=0; i<entW.length; i++){ 
+        if(xArr.indexOf(entW)== -1){
+            char = entW;
+            match_char_p(char, game_word)
+            xArr.push(entW);
+        } else {
+            char ='9';
+            match_char_m(char, game_word)
+    }
+    }
+  
 }
 
 
 
 //  MATCH INPUT CHAR WITH CURRENT WORD
-function match_char(char, game_word){
+function match_char_p(char, game_word){
     var i=0;
     while (i< game_word.length){
         if(game_word[i].toLowerCase() == char){ 
             showDiv(char)
             score+=10;
             upScore(score); 
+        }  
+        i++;
+    } 
+}
+
+function match_char_m(char, game_word){
+    var i=0;
+    while (i< game_word.length){
+        if(game_word[i].toLowerCase() == char){ 
+            
         } else {
             score-=1;
             upScore(score);
@@ -60,8 +84,7 @@ function match_char(char, game_word){
             } 
         }
         i++;
-    }
-
+    } 
 }
  
 
