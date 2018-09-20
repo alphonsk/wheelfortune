@@ -111,7 +111,7 @@ function onLod (){
   
      
     while (i<tt){
-    $('.words').append("<div class='mainInn' onclick='myShow(this)' )>" + game_word[i] + "</div>");
+    $('.words').append("<div class='mainInn' )>" + game_word[i] + "</div>");
     i++;
     }
     
